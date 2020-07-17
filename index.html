@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tuna</title>
+    <link rel="icon" href="img/favicon.png" type="image/png" >
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="owl-carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl-carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css">
+</head>
+<body>
+<div class="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="corono-virus-portal">
+                    KORONOVİRÜS PORTALI
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="language" >
+                    <select class="form-control" id="language">
+                        <option>TR</option>
+                        <option>EN</option>
+                        <option>AR</option>
+                        <option>FR</option>
+                        <option>RU</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <div class="search-show-btn">
+                        <i class="fa fa-search"></i>
+                    </div>
+                  <div class="search-text">
+                      <input type="text" placeholder="Arama"  />
+                  </div>
+
+                </div>
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="logo-section">
+                    <a href="#">
+                        <svg width="228" height="57" viewBox="0 0 228 57" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="228" height="57" fill="url(#pattern0)"/>
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0" transform="translate(-0.00384615) scale(0.00384615 0.0153846)"/>
+                                </pattern>
+                                <image id="image0" width="262" height="65" xlink:href="data:image/png;base64,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"/>
+                            </defs>
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="header-menu">
+                    <ul>
+                        <li>
+                            <a  href="#">Ana Sayfa</a>
+
+                        </li>
+                        <li>
+                            <a  href="#">Hakkımızda</a>
+                        </li>
+                        <li>
+                            <a  href="#">Faaliyet Alanları</a>
+                        </li>
+                        <li>
+                            <a  href="#">Ekip</a>
+                        </li>
+                        <li>
+                            <a  href="#">Kariyer</a>
+                        </li>
+                        <li>
+                            <a  href="#">Yayınlar</a>
+                        </li>
+                        <li>
+                            <a  href="#">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+                    <div class="mobil-menu-btn">
+                        <div class="top-line"></div>
+                        <div class="middle-line"></div>
+                        <div class="bottom-line"></div>
+                    </div>
+                <div class="mobile-menu">
+                    <ul>
+                        <li>
+                            <a class="list" href="#aboutus">About Us</a>
+
+                        </li>
+                        <li>
+                            <a class="list" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li>
+                            <a class="list" href="#latestnews">Latest News</a>
+                        </li>
+                        <li>
+                            <a class="list" href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a class="list" href="#contactus">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="language" >
+                        <ul>
+                            <li><a href="#"><span class="flag-icon flag-icon-de"></span></a></li>
+                            <li><a href="#"><span class="flag-icon flag-icon-fr"></span></a></li>
+                            <li><a href="#"><span class="flag-icon flag-icon-us"></span></a></li>
+                            <li><a href="#"><span class="flag-icon flag-icon-es"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="banner-section">
+        <div class="main-slider">
+            <div class="owl-carousel owl-theme" id="main-slider">
+                <div class="item">
+                    <div class="main-slider-item">
+                        <div class="main-slider-content">
+                            <h3>Ready For <b> Discover New Earths </b></h3>
+                            <div class="content">
+                                <p>lorem ipsum dolar sit.</p>
+                            </div>
+                            <div class="slider-btn">
+                                <a href="#"> Read-more</a>
+                            </div>
+                        </div>
+                        <img src="img/sliders/slider-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="main-slider-item">
+                        <div class="main-slider-content">
+                            <h3>Ready For <b>Fly</b> </h3>
+                            <div class="content">
+                                <p>lorem ipsum dolar sit.</p>
+                            </div>
+                            <div class="slider-btn">
+                                <a href="#"> Read-more</a>
+                            </div>
+                        </div>
+                        <img src="img/sliders/slider-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="main-slider-item">
+                        <div class="main-slider-content">
+                            <h3>Ready For <b>Go  Far</b></h3>
+                            <div class="content">
+                                <p>lorem ipsum dolar sit.</p>
+                            </div>
+                            <div class="slider-btn">
+                                <a href="#"> Read-more</a>
+                            </div>
+                        </div>
+                        <img src="img/sliders/slider-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-play play">  <i class="fa fa-play"></i></div>
+        <div class="btn-stop stop"><i class="fa fa-stop"></i></div>
+</section>
+
+<section class="counter-section">
+    <div class="container">
+        <div class="counters visibled">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="counter wow slideInLeft">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+
+                        <span class="counter-value" data-count="60">0</span>
+                        <small>+</small>
+                        <b>Launch</b>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter wow slideInUp">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span class="counter-value" data-count="1">0</span>
+                        <small>K</small>
+                        <b>Employes</b>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter wow slideInUp">
+                        <i class="fa fa-grav" aria-hidden="true"></i>
+                        <span class="counter-value" data-count="20">0</span>
+                        <b>Astronauts</b>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="counter wow slideInRight">
+                        <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                        <span class="counter-value" data-count="45">0</span>
+                        <b>Partners</b>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="webiner-platform"  id="aboutus">
+        <div class="circleRed "    ><img class="wow slideInUp" src="img/sun.png" alt=""> </div>
+        <div class="triangle-right-wight-blue"></div>
+    <div class="webiner-inside">
+        <div class="webiner-desc">
+            <div class="homepage-title titlethree">
+            <h3>About Us</h3>
+            <span></span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#">Read Moore ></a>
+        </div>
+        <div class="webiner-img">
+            <img src="img/earth.png" alt="" />
+
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+<section class="live-solution wow slideInUp" id="testimonials">
+    <div class="space-darkness"></div>
+    <div>
+    <div class="container">
+        <div class="homepage-title wow slideInUp"   >
+            <h3>Testimonials</h3>
+            <span></span>
+        </div>
+
+        <div class="owl-carousel owl-theme"  id="testimonialsslider"  >
+            <div class="item">
+                <div class="live-box">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="testimonials-img">
+                                <img class="sun" src="img/sun.png" alt="">
+                                <img src="img/profile1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="live-desc">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <div class="socials">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="img/icon/facebook.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/youtube-play.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/twitch.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/periscope.svg" alt=""></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="live-box">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="testimonials-img">
+                                <img class="sun" src="img/sun.png" alt="">
+                                <img src="img/profile1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="live-desc">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <div class="socials">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="img/icon/facebook.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/youtube-play.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/twitch.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/periscope.svg" alt=""></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="live-box">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="testimonials-img">
+                                <img class="sun" src="img/sun.png" alt="">
+                                <img src="img/profile1.png" alt="">
+
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="live-desc">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <div class="socials">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="img/icon/facebook.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/youtube-play.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/twitch.svg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="img/icon/periscope.svg" alt=""></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div  id="latestnews"> </div>
+    <div class="homepage-title wow slideInUp"   >
+        <h3> Our Latest News</h3>
+        <span></span>
+    </div>
+    <div class="home-services">
+
+
+        <div class="home-service-box wow slideInLeft">
+            <h3>Lorem ipsum dolor</h3>
+            <h4>Lorem ipsum</h4>
+            <img src="img/services-1.jpg" alt="" />
+            <div class="home-services-desc">
+                <div class="red-line"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+        <div class="home-service-box wow slideInUp">
+            <h3>Lorem ipsum dolor</h3>
+            <h4>Lorem ipsum</h4>
+            <img src="img/services-3.jpg" alt="" />
+            <div class="home-services-desc">
+                <div class="red-line"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+        <div class="home-service-box wow slideInUp">
+            <h3>Lorem ipsum dolor</h3>
+            <h4>Lorem ipsum</h4>
+            <img src="img/services-1.jpg" alt="" />
+            <div class="home-services-desc">
+                <div class="red-line"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+        <div class="home-service-box wow slideInRight">
+            <h3>Lorem ipsum dolor</h3>
+            <h4>Lorem ipsum</h4>
+            <img src="img/services-2.jpg" alt="" />
+            <div class="home-services-desc">
+                <div class="red-line"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="rightwhite">
+        <div class="service-triangle-white"> </div>
+    </div>
+    <div class="rightred">
+        <div class="service-triangle-red"> </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+
+<section class="what-are-we-doing"   id="services">
+    <section class="work-love">
+        <div class="container">
+            <div class="love-work wow slideInUp">
+                <div class="homepage-title second-title">
+                    <h3>Services</h3>
+                    <span></span>
+                </div>
+                <p>Lorem ipsum dolar sit</p>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="owl-carousel owl-theme wow slideInUp"  id="wedoing"  >
+            <div class="item">
+                <div class="item-hover">
+                    <div class="item-hover-img">
+                        <img src="img/companies/tunacompany.jpg" alt="">
+                    </div>
+                </div>
+                <div class="doing-top">
+                    <div class="doing-top-inside">
+                        <div class="left-angle"></div>
+                        <div class="right-angle"></div>
+                    </div>
+                </div>
+                <img src="img/launch-1.jpg" alt="">
+                <div class="doing-bottom">
+                    <div class="left-angle"></div>
+                    <div class="right-angle"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-hover">
+                    <div class="item-hover-img">
+                        <img src="img/companies/tunacompany.jpg" alt="">
+                    </div>
+                </div>
+                <div class="doing-top">
+                    <div class="doing-top-inside">
+                        <div class="left-angle"></div>
+                        <div class="right-angle"></div>
+                    </div>
+                </div>
+                <img src="img/launch-2.jpg" alt="">
+                <div class="doing-bottom">
+                    <div class="left-angle"></div>
+                    <div class="right-angle"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-hover">
+                    <div class="item-hover-img">
+                        <img src="img/companies/tunacompany.jpg" alt="">
+                    </div>
+                </div>
+                <div class="doing-top">
+                    <div class="doing-top-inside">
+                        <div class="left-angle"></div>
+                        <div class="right-angle"></div>
+                    </div>
+                </div>
+                <img src="img/launch-3.jpg" alt="">
+                <div class="doing-bottom">
+                    <div class="left-angle"></div>
+                    <div class="right-angle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fly-rules">
+    <div class="container">
+        <div class="homepage-title second-title wow slideInUp">
+            <h3>Fly Rules</h3>
+            <span></span>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="fly-rules-img wow slideInLeft">
+                    <img src="img/services-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="fly-rules-item wow slideInRight">
+                    <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    First Rule
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    Second Rule
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    Third Rule
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+
+<section class="contact-us " id="contactus">
+    <div class="homepage-title second-title wow slideInUp" >
+        <h3>Contact Us</h3>
+        <span></span>
+    </div>
+    <div class="container">
+
+        <div class="contact-form wow slideInUp">
+            <form action="">
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-user"></i></div>
+                        </div>
+                        <input type="text" class="form-control-lg" required placeholder="*Username">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                        </div>
+                        <input type="text" class="form-control-lg" required placeholder="*Email"  >
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-phone"></i></div>
+                        </div>
+                        <input type="text" class="form-control-lg" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                        </div>
+                        <input type="text" class="form-control-lg" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-comment" aria-hidden="true"></i></div>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="10"placeholder="Subject" ></textarea>
+                    </div>
+
+
+                    <input class="contact-btn" type="submit" onclick="">
+                </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+<section class="moon-section">
+    <div class="align-middle">
+        <div class="moon-out "></div>
+        <div class="moon wow slideInUp">
+            <div class="moon-inside">
+                <div class="contact-info">
+                    <div class="homepage-title" >
+                        <h3>Our Place</h3>
+                        <span></span>
+                    </div>
+                    <ul>
+                        <li>
+                            <span><i class="fa fa-globe" aria-hidden="true"></i></span> <a href="#">Our Place Street 111</a>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope" aria-hidden="true"></i></span> <a href="#">example@example.com</a>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i></span> <a href="#">333 444 111</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.79449206422!2d28.871752680878107!3d41.00549539351801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1sen!2str!4v1585476472582!5m2!1sen!2str" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<div class="clearfix"></div>
+<footer>
+    <div class="container">
+        <div class="footer-inside">
+            <div class="footer-logo wow slideInUp">
+                <img src="img/logo-white.png" alt="">
+            </div>
+            <div class="footer-line"></div>
+
+            <div clasS="footer-menu wow slideInLeft">
+                <ul>
+                    <li>
+                        <a class="list" href="#aboutus">About Us</a>
+
+                    </li>
+                    <li>
+                        <a class="list" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li>
+                        <a class="list" href="#latestnews">Latest News</a>
+                    </li>
+                    <li>
+                        <a class="list" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="list" href="#contactus">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social wow slideInRight">
+                <ul>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div class="footer-line"></div>
+            <div class="copyright wow slideInUp">
+                <p>Tuna Company © 2020 All Right Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;"><i class="fa fa-rocket" aria-hidden="true"></i>
+    <b>
+        <div class="flame"></div>
+    </b>
+</button>
+</body>
+
+<script  src="js/jquery-3.4.1.min.js"></script>
+<script src="owl-carousel/dist/owl.carousel.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script  src="js/main.js"></script>
+
+<script src="js/wow.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+<!--
+<script  src="js/wow.js"></script>
+<script>
+    new WOW().init();
+</script>-->
+</html>
