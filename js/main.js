@@ -81,9 +81,9 @@ $('#main-slider').owlCarousel({
     dots:true,
     nav:true,
     autoplay:true,
-    autoplayTimeout:1000,
+    autoplayTimeout:3000,
     autoplayHoverPause:true,
-    navText:['<div class="slider-arrow-box"><i class="fa fa-rocket" aria-hidden="true"></i><b><div class="flame"></div></b></div>','<div class="slider-arrow-box"><b><div class="flame"></div></b><i class="fa fa-rocket" aria-hidden="true"></i></div>'],
+    navText:['<div class="slider-arrow-box"><img src="img/arrow-white.svg" /></div>','<div class="slider-arrow-box"><img src="img/arrow-white.svg" /></div>'],
     responsive:{
         0:{
             items:1
@@ -101,16 +101,48 @@ $('#main-slider').owlCarousel({
 
 $('.play').on('click',function(){
     $('#main-slider').trigger('play.owl.autoplay',[1000])
+    $(this).addClass('close');
+    $('.stop').removeClass('close');
 })
 $('.stop').on('click',function(){
     $('#main-slider').trigger('stop.owl.autoplay')
+    $(this).addClass('close');
+    $('.play').removeClass('close');
 })
 
-$('#testimonialsslider').owlCarousel({
+$('#activity-areas').owlCarousel({
+    items:3,
+    loop:true,
+    margin:15,
+    dots:true,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    navText:['<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>','<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>'],
+    responsive:{
+        0:{
+            items:3
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+
+$('#information-notes').owlCarousel({
     items:1,
     loop:true,
     margin:15,
-    nav:false,
+    dots:true,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    navText:['<div class="slider-arrow-box"><img src="img/arrow-white.svg" /></div>','<div class="slider-arrow-box"><img src="img/arrow-white.svg" /></div>'],
     responsive:{
         0:{
             items:1
@@ -121,25 +153,6 @@ $('#testimonialsslider').owlCarousel({
         1000:{
             items:1
         }
-    }
-})
-$('#wedoing').owlCarousel({
-    items:3,
-    loop:true,
-    margin:15,
-    nav:true,
-    responsive:{
-        0:{
-            items:1,
-            margin:50,
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:3
-        },
-
     }
 })
 
