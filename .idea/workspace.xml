@@ -2,46 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da916d74-af76-4a03-9a7b-da8d76e37f55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/.sass-cache/40df4b21cb4b7825fd51bf85f69d3c20cba4957c/style-variables.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/css/.sass-cache/40df4b21cb4b7825fd51bf85f69d3c20cba4957c/style-variables.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/.sass-cache/40df4b21cb4b7825fd51bf85f69d3c20cba4957c/style.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/css/.sass-cache/40df4b21cb4b7825fd51bf85f69d3c20cba4957c/style.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/responsive.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/responsive.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style-variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/companies/tunacompany.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/companies/tunacompany.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/crosshair.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/earth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/flame.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/flame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/jimmy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/kare-back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/launch-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/launch-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/launch-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/live-solution.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo - Kopya.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/profile1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/profile2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/reklam-back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/services-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/services-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/services-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sliders/27-271154_picsart-light-transparent-image-png-arts-transparent-sun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sliders/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sliders/slider-1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sliders/slider-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sliders/slider-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/stars.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sun123.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/universe_blue.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="447" column="17" selection-start-line="447" selection-start-column="17" selection-end-line="447" selection-end-column="17" />
+            <state relative-caret-position="315">
+              <caret line="15" column="115" selection-start-line="15" selection-start-column="115" selection-end-line="15" selection-end-column="115" />
               <folding>
                 <element signature="n#ul#0;n#div#0;n#li#2;n#ul#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -67,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="2638" column="12" selection-start-line="2638" selection-start-column="12" selection-end-line="2638" selection-end-column="12" />
+            <state relative-caret-position="471">
+              <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
               <folding>
                 <element signature="e#18953#19343#0" />
                 <element signature="e#19360#19678#0" />
@@ -95,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
-              <caret line="131" column="9" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -124,6 +89,8 @@
       <find>#2F3640</find>
       <find>footer-inside</find>
       <find>myBtn</find>
+      <find>my</find>
+      <find>logo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,12 +182,12 @@
       <updated>1594982560788</updated>
       <workItem from="1594982561988" duration="9757000" />
       <workItem from="1595006554854" duration="7260000" />
-      <workItem from="1595048892567" duration="14324000" />
+      <workItem from="1595048892567" duration="15605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31341000" />
+    <option name="totallyTimeSpent" value="32622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -239,7 +206,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -257,7 +224,7 @@
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
-          <caret line="131" column="9" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -270,8 +237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="447" column="17" selection-start-line="447" selection-start-column="17" selection-end-line="447" selection-end-column="17" />
+        <state relative-caret-position="315">
+          <caret line="15" column="115" selection-start-line="15" selection-start-column="115" selection-end-line="15" selection-end-column="115" />
           <folding>
             <element signature="n#ul#0;n#div#0;n#li#2;n#ul#0;n#nav#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#button#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -281,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="2638" column="12" selection-start-line="2638" selection-start-column="12" selection-end-line="2638" selection-end-column="12" />
+        <state relative-caret-position="471">
+          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
           <folding>
             <element signature="e#18953#19343#0" />
             <element signature="e#19360#19678#0" />

@@ -19,6 +19,39 @@ a {
   text-decoration: none !important;
   cursor: pointer; }
 
+nav {
+  position: relative; }
+
+ul {
+  list-style: none; }
+
+li {
+  display: inline-block; }
+
+a {
+  display: block;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 2em;
+  text-decoration: none; }
+
+li div {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0; }
+
+li:hover div {
+  display: block; }
+
+li div ul {
+  display: inline-block;
+  vertical-align: top; }
+
+li div ul li {
+  display: block; }
+
 .close {
   display: none !important; }
 
@@ -352,7 +385,7 @@ header {
       padding: 0px;
       background: none !important; }
     header .logo-section img {
-      height: 32px; }
+      height: 57px; }
   header .main-menu {
     background: none !important; }
     header .main-menu ul li {
