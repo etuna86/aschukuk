@@ -1,4 +1,5 @@
 @import 'style-variables';
+@import 'fonts';
 @import url('https://fonts.googleapis.com/css?family=Gugi&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
@@ -7,11 +8,10 @@
 
 body
 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'ArialNovaW07-Regular';
 }
 *{
-  font-family: 'Raleway', sans-serif;
-  //font-family: 'ArialNovaW07-Regular';
+  font-family: 'ArialNovaW07-Regular';
 }
 
 ul
@@ -56,7 +56,6 @@ a:hover {
 }
 
 li div {
-  display: none;
   width: 100%;
   height: auto;
   position: absolute;
@@ -211,6 +210,7 @@ li div ul li a {
     .corono-virus-portal{
       color:$whitecolor;
       line-height: 50px;
+      font-size: 18px;
     }
     .social
     {
@@ -462,8 +462,9 @@ li div ul li a {
       ul{
         li{
           .triangle-block{
+            @include scale-method(0);
+            @include transition-method(0.2s);
             position: absolute;
-            display: none;
             text-align: center;
             margin-left: 10%;
             top: 50px;
@@ -473,46 +474,72 @@ li div ul li a {
           }
           background-color: transparent;
           &:hover{
-          background-color: transparent !important;
+
+            background-color: transparent !important;
             .triangle-block{
-              display: block !important;
+              @include scale-method(1);
+              @include transition-method(0.2s);
             }
             a{
               background-color: transparent !important;
+              top: -2px;
+              position: relative;
+              @include transition-method(0.5s);
             }
             div {
               top: calc(100%);
-              @include transition-method(0.5);
+              @include transition-method(0.2s);
+              overflow:unset;
+              @include scale-method(1);
+              ul{
+                height: auto;
+                li{
+                  height: auto;
+                  position: relative;
+                  a{
+                    height: auto;
+                    padding: 20px;
+                  }
+                }
+              }
             }
           }
-          @include transition-method(0.5);
           a{
             color:$whitecolor;
             font-size:18px;
             text-align: center;
             font-weight: normal;
-            @include transition-method(0.5);
+            font-family: 'ArialNovaW07-Regular';
+            @include transition-method(0.2s);
             :hover{
               font-size:20px;
-              @include transition-method(0.5);
-
+              @include transition-method(0.2s);
+              margin-top:-5px;
             }
           }
+
           div{
-            top: calc(-100%);
+            //top: calc(-100%);
             width:100%;
             background: $whitecolor !important;
-
+            overflow: hidden;
+            @include scale-method(0);
+            @include transition-method(0.2s);
             ul{
+              @include transition-method(0.2s);
               float: left;
               border-left:1px solid $blackcolor;
               margin-top:15px;
               margin-bottom:15px;
+              height: 0px;
               &:first-child{
                 border-left:0px;
               }
               li{
                 border-bottom: 1px solid $blackcolor;
+                height: 0px;
+                position: absolute;
+                @include transition-method(0.5s);
                 &:last-child{
                   border-bottom:0px;
                 }
@@ -521,6 +548,9 @@ li div ul li a {
                   font-size:16px;
                   text-transform: capitalize;
                   font-weight: bold;
+                  @include transition-method(0.5s);
+                  height: 0px;
+                  padding: 0px;
                   &:hover{
                     color:$menuHoverBlue;
 
@@ -664,11 +694,15 @@ li div ul li a {
       {
         h3
         {
+          font-family: 'ArialNovaW07-Bold';
           color:$whitecolor;
           position: relative;
           top: 50%;
           transform: translateY(-50%);
           text-transform: uppercase;
+          b{
+            font-family: 'ArialNovaW07-Bold';
+          }
         }
         .main-slider-content
         {
@@ -917,6 +951,7 @@ li div ul li a {
     background-color:$greycolor;
     padding:50px 0px;
     h3{
+      font-family: 'ArialNovaW07-Bold';
       text-align: center;
       font-weight: bold;
       font-size: 30px;
@@ -1090,6 +1125,7 @@ li div ul li a {
         padding: 0px 1rem;
       }
       p{
+        font-family: 'ArialNovaW07-Light';
         color:$whitecolor;
         font-weight: 300;
         font-size: 18px;
@@ -1251,6 +1287,7 @@ li div ul li a {
         margin:15px 0px;
       }
       p{
+        font-family: 'ArialNovaW07-Light';
         color:$whitecolor;
         margin:15px 0px;
         font-style: normal;
@@ -1878,7 +1915,9 @@ li div ul li a {
   footer
   {
     background-color: $blackcolor;
-    padding: 30px 0px;
+    padding: 30px 0px 0px 0px;
+    margin: 0px;
+    overflow: auto;
     .container{
       position: relative;
     }
@@ -1887,6 +1926,7 @@ li div ul li a {
       .footer-contact{
         border-right:1px solid $greyBorderColor;
         p{
+          font-family: 'ArialNovaW07-Bold';
           font-weight: bold;
           font-size: 18px;
           color: $whitecolor;
@@ -1894,6 +1934,7 @@ li div ul li a {
         }
         a
         {
+          font-family: 'ArialNovaW07-Bold';
           background:none;
           padding: 0px;
           text-decoration: none;
@@ -1904,6 +1945,14 @@ li div ul li a {
           &:hover
           {
             color: $whitecolor;
+          }
+        }
+      }
+      .footer-partners{
+        img {
+          margin:15px;
+          &:first-child{
+            margin-left:0px;
           }
         }
       }
@@ -1942,15 +1991,19 @@ li div ul li a {
             width:50%;
             a
             {
+              font-family: 'ArialNovaW07-Bold';
               background:none;
               padding: 0px;
               text-decoration: none;
               color: $whitecolor;
               font-weight: bold;
               font-size: 18px;
+              @include transition-method(0.2s);
               &:hover
               {
-                color: $whitecolor;
+                margin-left:5px;
+                color: $menuHoverBlue;
+                @include transition-method(0.2s);
               }
             }
           }
@@ -1966,6 +2019,7 @@ li div ul li a {
         }
       }
       .direction-btn{
+        font-family: 'ArialNovaW07-Bold';
         background-color: $normalBlueColor;
         border:1px solid $normalBlueColor;
         text-align: center;
@@ -2036,10 +2090,12 @@ li div ul li a {
       }
       .copyright
       {
+        font-family: 'ArialNovaW07-Light';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 12px;
         text-align: center;
-        text-align: center;
-        height: 30px;
-        line-height: 30px;
         margin-top: 15px;
         p
         {

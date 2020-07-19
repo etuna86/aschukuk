@@ -2,11 +2,20 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 @import url("https://db.onlinewebfonts.com/c/e6404b5b984ecbc480bbeb17306ae946?family=Arial+Nova");
+@font-face {
+  font-family: 'ArialNovaW07-Regular';
+  src: url("../fonts/arialnova/Arial-Nova-W07-Regular/Arial-Nova-W07-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'ArialNovaW07-Bold';
+  src: url("../fonts/arialnova/Arial-Nova-W07-Bold/Arial-Nova-W07-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'ArialNovaW07-Light';
+  src: url("../fonts/arialnova/Arial-Nova-W07-Light/Arial-Nova-W07-Light.ttf") format("truetype"); }
 body {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'ArialNovaW07-Regular'; }
 
 * {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'ArialNovaW07-Regular'; }
 
 ul {
   margin: 0px;
@@ -36,7 +45,6 @@ a {
   text-decoration: none; }
 
 li div {
-  display: none;
   width: 100%;
   height: auto;
   position: absolute;
@@ -174,7 +182,8 @@ li div ul li {
   z-index: 999; }
   .top-header .corono-virus-portal {
     color: #fff;
-    line-height: 50px; }
+    line-height: 50px;
+    font-size: 18px; }
   .top-header .social {
     margin: 0px 15px;
     display: inline-block;
@@ -389,14 +398,16 @@ header {
   header .main-menu {
     background: none !important; }
     header .main-menu ul li {
-      background-color: transparent;
-      transition: all 0.5 ease-in;
-      -moz-transition: all 0.5 ease-in;
-      -webkit-transition: all 0.5 ease-in;
-      -ms-transition: all 0.5 ease-in; }
+      background-color: transparent; }
       header .main-menu ul li .triangle-block {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        -moz-transform: scale(0);
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
         position: absolute;
-        display: none;
         text-align: center;
         margin-left: 10%;
         top: 50px; }
@@ -410,50 +421,100 @@ header {
       header .main-menu ul li:hover {
         background-color: transparent !important; }
         header .main-menu ul li:hover .triangle-block {
-          display: block !important; }
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          -moz-transform: scale(1);
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in; }
         header .main-menu ul li:hover a {
-          background-color: transparent !important; }
+          background-color: transparent !important;
+          top: -2px;
+          position: relative;
+          transition: all 0.5s ease-in;
+          -moz-transition: all 0.5s ease-in;
+          -webkit-transition: all 0.5s ease-in;
+          -ms-transition: all 0.5s ease-in; }
         header .main-menu ul li:hover div {
           top: calc(100%);
-          transition: all 0.5 ease-in;
-          -moz-transition: all 0.5 ease-in;
-          -webkit-transition: all 0.5 ease-in;
-          -ms-transition: all 0.5 ease-in; }
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in;
+          overflow: unset;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          -moz-transform: scale(1); }
+          header .main-menu ul li:hover div ul {
+            height: auto; }
+            header .main-menu ul li:hover div ul li {
+              height: auto;
+              position: relative; }
+              header .main-menu ul li:hover div ul li a {
+                height: auto;
+                padding: 20px; }
       header .main-menu ul li a {
         color: #fff;
         font-size: 18px;
         text-align: center;
         font-weight: normal;
-        transition: all 0.5 ease-in;
-        -moz-transition: all 0.5 ease-in;
-        -webkit-transition: all 0.5 ease-in;
-        -ms-transition: all 0.5 ease-in; }
+        font-family: 'ArialNovaW07-Regular';
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in; }
         header .main-menu ul li a :hover {
           font-size: 20px;
-          transition: all 0.5 ease-in;
-          -moz-transition: all 0.5 ease-in;
-          -webkit-transition: all 0.5 ease-in;
-          -ms-transition: all 0.5 ease-in; }
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in;
+          margin-top: -5px; }
       header .main-menu ul li div {
-        top: calc(-100%);
         width: 100%;
-        background: #fff !important; }
+        background: #fff !important;
+        overflow: hidden;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        -moz-transform: scale(0);
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in; }
         header .main-menu ul li div ul {
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in;
           float: left;
           border-left: 1px solid #2F3640;
           margin-top: 15px;
-          margin-bottom: 15px; }
+          margin-bottom: 15px;
+          height: 0px; }
           header .main-menu ul li div ul:first-child {
             border-left: 0px; }
           header .main-menu ul li div ul li {
-            border-bottom: 1px solid #2F3640; }
+            border-bottom: 1px solid #2F3640;
+            height: 0px;
+            position: absolute;
+            transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -webkit-transition: all 0.5s ease-in;
+            -ms-transition: all 0.5s ease-in; }
             header .main-menu ul li div ul li:last-child {
               border-bottom: 0px; }
             header .main-menu ul li div ul li a {
               color: #2F3640;
               font-size: 16px;
               text-transform: capitalize;
-              font-weight: bold; }
+              font-weight: bold;
+              transition: all 0.5s ease-in;
+              -moz-transition: all 0.5s ease-in;
+              -webkit-transition: all 0.5s ease-in;
+              -ms-transition: all 0.5s ease-in;
+              height: 0px;
+              padding: 0px; }
               header .main-menu ul li div ul li a:hover {
                 color: #3867D6; }
   header .header-menu {
@@ -530,11 +591,14 @@ header {
 .banner-section {
   position: relative; }
   .banner-section .main-slider .main-slider-item h3 {
+    font-family: 'ArialNovaW07-Bold';
     color: #fff;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     text-transform: uppercase; }
+    .banner-section .main-slider .main-slider-item h3 b {
+      font-family: 'ArialNovaW07-Bold'; }
   .banner-section .main-slider .main-slider-item .main-slider-content {
     min-width: 200px;
     position: absolute;
@@ -747,6 +811,7 @@ header {
   background-color: #DCDDE1;
   padding: 50px 0px; }
   .activity-areas h3 {
+    font-family: 'ArialNovaW07-Bold';
     text-align: center;
     font-weight: bold;
     font-size: 30px;
@@ -909,6 +974,7 @@ header {
         display: inline-block;
         padding: 0px 1rem; }
       .homepage-section .announcement .announcement-box p {
+        font-family: 'ArialNovaW07-Light';
         color: #fff;
         font-weight: 300;
         font-size: 18px; }
@@ -1059,6 +1125,7 @@ header {
         color: #fff;
         margin: 15px 0px; }
       .homepage-section .information-notes #information-notes .activities-box p {
+        font-family: 'ArialNovaW07-Light';
         color: #fff;
         margin: 15px 0px;
         font-style: normal;
@@ -1582,17 +1649,21 @@ header {
 
 footer {
   background-color: #2F3640;
-  padding: 30px 0px; }
+  padding: 30px 0px 0px 0px;
+  margin: 0px;
+  overflow: auto; }
   footer .container {
     position: relative; }
   footer .footer-inside .footer-contact {
     border-right: 1px solid #EAEAEA; }
     footer .footer-inside .footer-contact p {
+      font-family: 'ArialNovaW07-Bold';
       font-weight: bold;
       font-size: 18px;
       color: #fff;
       margin-bottom: 5px; }
     footer .footer-inside .footer-contact a {
+      font-family: 'ArialNovaW07-Bold';
       background: none;
       padding: 0px;
       text-decoration: none;
@@ -1602,6 +1673,10 @@ footer {
       display: inline-block; }
       footer .footer-inside .footer-contact a:hover {
         color: #fff; }
+  footer .footer-inside .footer-partners img {
+    margin: 15px; }
+    footer .footer-inside .footer-partners img:first-child {
+      margin-left: 0px; }
   footer .footer-inside .footer-line {
     height: 2px;
     background: -moz-linear-gradient(0% 50% 0deg, rgba(153, 153, 153, 0.2) 0%, #999999 52.97%, rgba(153, 153, 153, 0.2) 100%);
@@ -1632,14 +1707,24 @@ footer {
         padding: 0px 10px;
         width: 50%; }
         footer .footer-inside .footer-menu ul li a {
+          font-family: 'ArialNovaW07-Bold';
           background: none;
           padding: 0px;
           text-decoration: none;
           color: #fff;
           font-weight: bold;
-          font-size: 18px; }
+          font-size: 18px;
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in; }
           footer .footer-inside .footer-menu ul li a:hover {
-            color: #fff; }
+            margin-left: 5px;
+            color: #3867D6;
+            transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            -webkit-transition: all 0.2s ease-in;
+            -ms-transition: all 0.2s ease-in; }
   footer .footer-inside .map {
     margin: 117px 0px 0px 0;
     height: 250px;
@@ -1650,6 +1735,7 @@ footer {
     footer .footer-inside .map iframe {
       height: 250px; }
   footer .footer-inside .direction-btn {
+    font-family: 'ArialNovaW07-Bold';
     background-color: #0D296C;
     border: 1px solid #0D296C;
     text-align: center;
@@ -1715,10 +1801,12 @@ footer {
             font-size: 18px;
             color: #999999; }
   footer .footer-inside .copyright {
+    font-family: 'ArialNovaW07-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 12px;
     text-align: center;
-    text-align: center;
-    height: 30px;
-    line-height: 30px;
     margin-top: 15px; }
     footer .footer-inside .copyright p {
       color: #999999; }
