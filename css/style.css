@@ -1650,8 +1650,7 @@ header {
 footer {
   background-color: #2F3640;
   padding: 30px 0px 0px 0px;
-  margin: 0px;
-  overflow: auto; }
+  margin: 0px; }
   footer .container {
     position: relative; }
   footer .footer-inside .footer-contact {
