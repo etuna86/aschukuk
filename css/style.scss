@@ -484,7 +484,7 @@ li div ul li a {
               background-color: transparent !important;
               top: -2px;
               position: relative;
-              @include transition-method(0.5s);
+              @include transition-method(0.2s);
             }
             div {
               top: calc(100%);
@@ -510,6 +510,7 @@ li div ul li a {
             text-align: center;
             font-weight: normal;
             font-family: 'ArialNovaW07-Regular';
+            top: 0px;
             @include transition-method(0.2s);
             :hover{
               font-size:20px;

@@ -432,10 +432,10 @@ header {
           background-color: transparent !important;
           top: -2px;
           position: relative;
-          transition: all 0.5s ease-in;
-          -moz-transition: all 0.5s ease-in;
-          -webkit-transition: all 0.5s ease-in;
-          -ms-transition: all 0.5s ease-in; }
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in; }
         header .main-menu ul li:hover div {
           top: calc(100%);
           transition: all 0.2s ease-in;
@@ -460,6 +460,7 @@ header {
         text-align: center;
         font-weight: normal;
         font-family: 'ArialNovaW07-Regular';
+        top: 0px;
         transition: all 0.2s ease-in;
         -moz-transition: all 0.2s ease-in;
         -webkit-transition: all 0.2s ease-in;
