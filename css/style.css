@@ -39,9 +39,6 @@ li {
 
 a {
   display: block;
-  padding: 20px;
-  font-family: sans-serif;
-  font-size: 2em;
   text-decoration: none; }
 
 li div {
@@ -437,6 +434,9 @@ header {
           -webkit-transition: all 0.2s ease-in;
           -ms-transition: all 0.2s ease-in; }
         header .main-menu ul li:hover div {
+          -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
           top: calc(100%);
           transition: all 0.2s ease-in;
           -moz-transition: all 0.2s ease-in;
@@ -455,6 +455,7 @@ header {
                 height: auto;
                 padding: 20px; }
       header .main-menu ul li a {
+        padding: 20px;
         color: #fff;
         font-size: 18px;
         text-align: center;
@@ -809,7 +810,6 @@ header {
         float: left; }
 
 .activity-areas {
-  background-color: #DCDDE1;
   padding: 50px 0px; }
   .activity-areas h3 {
     font-family: 'ArialNovaW07-Bold';
@@ -1219,13 +1219,21 @@ header {
   .activity-areas .activity-area-box {
     cursor: pointer; }
     .activity-areas .activity-area-box .activity-img img {
+      -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
       transition: all 0.3s ease-in;
       -moz-transition: all 0.3s ease-in;
       -webkit-transition: all 0.3s ease-in;
       -ms-transition: all 0.3s ease-in; }
     .activity-areas .activity-area-box:hover .activity-img img {
-      filter: grayscale(0);
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
       transition: all 0.3s ease-in;
       -moz-transition: all 0.3s ease-in;
       -webkit-transition: all 0.3s ease-in;
@@ -1240,6 +1248,147 @@ header {
       text-transform: capitalize;
       color: #0D296C;
       height: 70px; }
+
+.lawyers-on-subject-section {
+  padding-bottom: 50px; }
+  .lawyers-on-subject-section h3 {
+    padding: 25px 0px;
+    margin: 0px;
+    font-family: "ArialNovaW07-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    color: #2F3640;
+    text-align: center; }
+  .lawyers-on-subject-section #lawyers-on-subject {
+    padding: 0px 5vw; }
+    .lawyers-on-subject-section #lawyers-on-subject .owl-nav.disabled {
+      display: block; }
+    .lawyers-on-subject-section #lawyers-on-subject .owl-dots {
+      position: absolute;
+      left: 0;
+      right: 0; }
+      .lawyers-on-subject-section #lawyers-on-subject .owl-dots.disabled {
+        display: block; }
+      .lawyers-on-subject-section #lawyers-on-subject .owl-dots span {
+        background-color: #0D296C;
+        width: 16px;
+        height: 16px; }
+      .lawyers-on-subject-section #lawyers-on-subject .owl-dots .owl-dot.active span, .lawyers-on-subject-section #lawyers-on-subject .owl-dots .owl-theme .owl-dots .owl-dot:hover span {
+        border: 3px solid #2F3640;
+        background-color: #3867D6; }
+    .lawyers-on-subject-section #lawyers-on-subject .owl-prev {
+      outline: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: none;
+      transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in; }
+      .lawyers-on-subject-section #lawyers-on-subject .owl-prev:hover {
+        left: calc(-5px);
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in; }
+      .lawyers-on-subject-section #lawyers-on-subject .owl-prev .slider-arrow-box {
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 60px;
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in; }
+        .lawyers-on-subject-section #lawyers-on-subject .owl-prev .slider-arrow-box:hover {
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in;
+          background-color: transparent !important; }
+        .lawyers-on-subject-section #lawyers-on-subject .owl-prev .slider-arrow-box img {
+          -webkit-transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+          -moz-transform: rotate(-180deg); }
+    .lawyers-on-subject-section #lawyers-on-subject .owl-next {
+      outline: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: none; }
+      .lawyers-on-subject-section #lawyers-on-subject .owl-next:hover {
+        right: calc(-5px);
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in; }
+      .lawyers-on-subject-section #lawyers-on-subject .owl-next .slider-arrow-box {
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 60px;
+        transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in; }
+        .lawyers-on-subject-section #lawyers-on-subject .owl-next .slider-arrow-box:hover {
+          transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          -webkit-transition: all 0.2s ease-in;
+          -ms-transition: all 0.2s ease-in;
+          background-color: transparent !important; }
+  .lawyers-on-subject-section .lawyers-box {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in; }
+    .lawyers-on-subject-section .lawyers-box:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+      -o-filter: grayscale(0%);
+      transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in; }
+    .lawyers-on-subject-section .lawyers-box img {
+      border: 1px solid #0D296C; }
+    .lawyers-on-subject-section .lawyers-box h3 {
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 0px;
+      line-height: 23px;
+      text-align: center;
+      color: #0D296C;
+      text-transform: uppercase; }
+    .lawyers-on-subject-section .lawyers-box span {
+      font-family: "ArialNovaW07-Regular";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      color: #0D296C;
+      width: 100%;
+      display: block; }
+
+.grey-bg-color {
+  background: #DCDDE1; }
 
 .visibled {
   display: block; }

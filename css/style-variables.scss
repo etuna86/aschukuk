@@ -47,6 +47,14 @@ $mainColor:$weightBlueColor;
 }
 
 
+@mixin grayScaleMethod($grayScale){
+  -webkit-filter: grayscale($grayScale);
+  filter: grayscale($grayScale);
+  -moz-filter: grayscale($grayScale);
+  -ms-filter: grayscale($grayScale);
+  -o-filter: grayscale($grayScale);
+}
+
 @mixin triangleLeftUpper()
 {
   width: 0;
@@ -73,7 +81,11 @@ $mainColor:$weightBlueColor;
 
 }
 
-
+@mixin boxShadow(){
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
 
 @mixin doingTriangleLeftUpper()
 {

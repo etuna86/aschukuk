@@ -156,6 +156,31 @@ $('#information-notes').owlCarousel({
     }
 })
 
+
+$('#lawyers-on-subject').owlCarousel({
+    items:5,
+    loop:true,
+    margin:15,
+    dots:true,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    navText:['<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>','<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>'],
+    responsive:{
+        0:{
+            items:5
+        },
+        600:{
+            items:5
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+
 $(".list").on('click', function(event) {
     event.preventDefault();
     var hash = this.hash ;

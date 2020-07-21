@@ -44,9 +44,6 @@ li {
 
 a {
   display: block;
-  padding: 20px;
-  font-family: sans-serif;
-  font-size: 2em;
   text-decoration: none;
 
 }
@@ -487,6 +484,7 @@ li div ul li a {
               @include transition-method(0.2s);
             }
             div {
+              @include boxShadow();
               top: calc(100%);
               @include transition-method(0.2s);
               overflow:unset;
@@ -505,6 +503,7 @@ li div ul li a {
             }
           }
           a{
+            padding: 20px;
             color:$whitecolor;
             font-size:18px;
             text-align: center;
@@ -949,7 +948,6 @@ li div ul li a {
   }
 
   .activity-areas{
-    background-color:$greycolor;
     padding:50px 0px;
     h3{
       font-family: 'ArialNovaW07-Bold';
@@ -963,15 +961,10 @@ li div ul li a {
     }
     #activity-areas{
       padding:0px 10vw;
-
       .owl-nav{
         &.disabled{
           display: block;
         }
-
-
-
-
       }
       .owl-dots{
         position: absolute;
@@ -1394,14 +1387,14 @@ li div ul li a {
     cursor:pointer;
     .activity-img{
       img{
-        filter: grayscale(100%);
+        @include grayScaleMethod(100%);
         @include transition-method(0.3s);
       }
     }
     &:hover{
       .activity-img{
         img{
-          filter: grayscale(0);
+          @include grayScaleMethod(0%);
           @include transition-method(0.3s);
         }
       }
@@ -1418,6 +1411,152 @@ li div ul li a {
       height: 70px;
     }
   }
+}
+
+.lawyers-on-subject-section{
+  padding-bottom:50px;
+h3{
+  padding: 25px 0px;
+  margin:0px;
+  font-family: "ArialNovaW07-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color:$blackcolor;
+
+  text-align: center;
+
+}
+
+  #lawyers-on-subject{
+    padding: 0px 5vw;
+    .owl-nav{
+      &.disabled{
+        display: block;
+      }
+    }
+    .owl-dots{
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      &.disabled{
+        display: block;
+      }
+      span{
+        background-color: $normalBlueColor;
+        width: 16px;
+        height: 16px;
+      }
+      .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+        border:3px solid $blackcolor;
+        background-color: $menuHoverBlue;
+      }
+    }
+
+
+
+    .owl-prev{
+      outline: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: none;
+      @include transition-method(0.2s);
+      &:hover{
+        left: calc(-5px);
+        @include transition-method(0.2s);
+      }
+      .slider-arrow-box{
+        cursor:pointer;
+        height: 50px;
+        width:50px;
+        text-align:center;
+        line-height: 60px;
+        @include transition-method(0.2s);
+        &:hover{
+          @include transition-method(0.2s);
+          background-color:transparent !important;
+
+        }
+        img{
+          @include rotateMethod(-180deg);
+        }
+      }
+
+
+    }
+    .owl-next{
+      outline: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: none;
+      &:hover{
+        right: calc(-5px);
+        @include transition-method(0.2s);
+      }
+      .slider-arrow-box{
+        cursor:pointer;
+        height: 50px;
+        width:50px;
+        text-align:center;
+        line-height: 60px;
+        @include transition-method(0.2s);
+        &:hover{
+          @include transition-method(0.2s);
+          background-color:transparent !important;
+        }
+        img{
+        }
+      }
+    }
+  }
+
+
+
+  .lawyers-box{
+    @include grayScaleMethod(100%);
+    @include transition-method(0.2s);
+    &:hover{
+      @include grayScaleMethod(0%);
+      @include transition-method(0.2s);
+    }
+    img{
+      border:1px solid $normalBlueColor;
+    }
+    h3{
+
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 0px;
+      line-height: 23px;
+      text-align: center;
+      color:$normalBlueColor;
+      text-transform: uppercase;
+    }
+    span{
+      font-family: "ArialNovaW07-Regular";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      color:$normalBlueColor;
+      width:100%;
+      display: block;
+    }
+  }
+}
+
+
+.grey-bg-color{
+  background: $greycolor;
 }
   .visibled
   {
