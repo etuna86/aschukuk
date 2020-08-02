@@ -85,6 +85,7 @@ li div ul li a {
   display: none;
 }
 .mobile-menu{
+  display: none;
   overflow: hidden;
   height: 1px;
   @include transition-method(0.5s);
@@ -457,7 +458,14 @@ li div ul li a {
     .main-menu{
       background:none !important;
       ul{
+        float: right;
         li{
+          background-color: transparent;
+          &:last-child{
+            a{
+              padding-right:0px;
+            }
+          }
           .triangle-block{
             @include scale-method(0);
             @include transition-method(0.2s);
@@ -469,7 +477,7 @@ li div ul li a {
               @include triangle();
             }
           }
-          background-color: transparent;
+
           &:hover{
 
             background-color: transparent !important;
@@ -485,9 +493,10 @@ li div ul li a {
             }
             div {
               @include boxShadow();
-              top: calc(100%);
+              //top: calc(100%);
+              top: 35px;
               @include transition-method(0.2s);
-              overflow:unset;
+              overflow:visible;
               @include scale-method(1);
               ul{
                 height: auto;
@@ -1299,7 +1308,7 @@ li div ul li a {
   text-align: center;
   height: 200px;
   background: url("../img/page-header.jpg");
-  background-size: 100%;
+  //background-size: 100%;
   background-position: center ;
   .page-header-inside{
     position: relative;
@@ -1355,6 +1364,10 @@ li div ul li a {
     font-size: 18px;
     line-height: 20px;
     color:$aboutWordsColor;
+    a{
+      display: inline-block;
+      color:$menuHoverBlue;
+    }
   }
 }
 .img-border-radius{
@@ -1363,6 +1376,262 @@ li div ul li a {
   margin-bottom:15px ;
 }
 
+.career-form{
+  padding:40px;
+  background-color: $carrerSectionColor;
+  h3{
+    font-family: "ArialNovaW07-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: $normalBlueColor;
+  }
+  input[type=text]{
+    margin:10px 0px;
+    background-color: transparent;
+    font-family: "ArialNovaW07-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color:$aboutWordsColor;
+    width:100%;
+    border:0px;
+    border-bottom:1px solid $contactFromColor;
+    &::placeholder{
+      color:$aboutWordsColor;
+    }
+  }
+  textarea{
+    margin:10px 0px;
+    background-color: transparent;
+    font-family: "ArialNovaW07-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    min-height: 45px;
+    line-height: 30px;
+    color:$aboutWordsColor;
+    width:100%;
+    border:0px;
+    border-bottom:1px solid $contactFromColor;
+    &::placeholder{
+      color:$aboutWordsColor;
+    }
+  }
+
+  .select-file-section{
+    label{
+      margin-top:30px;
+      cursor:pointer;
+      width:100%;
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      height: 45px;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 45px;
+      text-align: center;
+      color:$whitecolor;
+      background-color: $normalBlueColor;
+      border:1px solid $normalBlueColor;
+      @include transition-method(0.3s);
+      &:hover{
+        background-color: $whitecolor;
+        color:$normalBlueColor;
+        @include transition-method(0.3s);
+      }
+    }
+    small{
+      width:100%;
+      display: block;
+      font-family: "ArialNovaW07-Light";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 9px;
+      line-height: normal;
+      color:$warningColor;
+    }
+  }
+
+  .from-checkbox{
+    width: 100%;
+    float: left;
+    display: block;
+    input[type=checkbox]{
+      height: 15px;
+      width:15px;
+      background-color: $greycolor;
+      float: left;
+    }
+    label{
+      font-family: "ArialNovaW07-Light";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 9px;
+      line-height: 24px;
+      color:$contactFromColor;
+      height: 15px;
+      float: left;
+    }
+  }
+  input[type=submit]{
+    margin-top: 10px;
+    float: left;
+    background-color: $normalBlueColor;
+    color:$whitecolor;
+    border: 1px solid $normalBlueColor;
+    height:54px;
+    line-height: 54px;
+    text-align: center;
+    display: inline-block;
+    padding:0px 2rem;
+    @include borderradius(10px);
+    font-family: "ArialNovaW07-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    @include transition-method(0.3s);
+    &:hover{
+      border: 1px solid $normalBlueColor;
+      background:none;
+      line-height: 54px;
+      color:$normalBlueColor;
+      @include transition-method(0.3s);
+    }
+  }
+}
+.lawyer-selection-section{
+  text-align: center;
+  .lawyer-selection{
+    display: flex;
+    width: 70%;
+    margin: 0px auto;
+    select{
+      flex: 1 1;
+      display: inline-block;
+      background-color: $normalBlueColor;
+      color: $whitecolor;
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      height: 40px;
+      line-height: 30px;
+      @include borderradius(0px);
+      width:auto;
+      margin:10px ;
+      padding: 0px 30px;
+      &:first-child{
+        @include borderradiusall(10px,0px,0px,10px)
+      }
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;       /* Remove default arrow */
+      background: url("../img/white-angle-down.svg") 96% / 16px no-repeat #0D296C;
+      &::-ms-expand {
+        display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+      }
+      option{
+        font-family: ArialNovaW07-Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 29px;
+        /* or 193% */
+        background-color: $whitecolor;
+        text-transform: capitalize;
+        color:$normalBlueColor;
+      }
+    }
+    .all-team-select{
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+      margin:10px ;
+      padding: 0px 1rem;
+      @include borderradiusall(0px,10px,10px,0px);
+      display: inline-block;
+      background-color: $normalBlueColor;
+      color: $whitecolor;
+      cursor:pointer;
+    }
+  }
+}
+.team-section{
+  margin:40px 0px;
+  .lawyers-box{
+
+    &:hover{
+      @include grayScaleMethod(0%);
+      @include transition-method(0.2s);
+
+      .lawyers-box-img {
+        img{
+          @include grayScaleMethod(0%);
+          @include transition-method(0.2s);
+        }
+      }
+
+      h3{
+
+        @include grayScaleMethod(0%);
+        @include transition-method(0.2s);
+      }
+      span{
+        @include grayScaleMethod(0%);
+        @include transition-method(0.2s);
+      }
+
+    }
+    .lawyers-box-img{
+      @include grayScaleMethod(0%);
+      @include transition-method(0.2s);
+      @include borderradius(10px);
+      border:1px solid $normalBlueColor;
+      img{
+        @include borderradius(10px);
+        width:100%;
+        @include grayScaleMethod(100%);
+        @include transition-method(0.2s);
+      }
+    }
+
+    h3{
+      margin-top:15px;
+      @include grayScaleMethod(100%);
+      @include transition-method(0.2s);
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 0px;
+      line-height: 23px;
+      text-align: center;
+      color:$normalBlueColor;
+      text-transform: uppercase;
+    }
+    span{
+      @include grayScaleMethod(100%);
+      @include transition-method(0.2s);
+      font-family: "ArialNovaW07-Regular";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      color:$normalBlueColor;
+      width:100%;
+      display: block;
+    }
+  }
+}
 // Activity Areas
 .activity-areas{
   padding: 25px 0px;
@@ -1385,6 +1654,8 @@ li div ul li a {
   }
   .activity-area-box{
     cursor:pointer;
+    @include grayScaleMethod(100%);
+    @include transition-method(0.3s);
     .activity-img{
       img{
         @include grayScaleMethod(100%);
@@ -1392,6 +1663,8 @@ li div ul li a {
       }
     }
     &:hover{
+      @include grayScaleMethod(0%);
+      @include transition-method(0.3s);
       .activity-img{
         img{
           @include grayScaleMethod(0%);
@@ -1519,17 +1792,46 @@ h3{
 
 
   .lawyers-box{
-    @include grayScaleMethod(100%);
-    @include transition-method(0.2s);
+
     &:hover{
       @include grayScaleMethod(0%);
       @include transition-method(0.2s);
-    }
-    img{
-      border:1px solid $normalBlueColor;
-    }
-    h3{
 
+      .lawyers-box-img {
+        img{
+          @include grayScaleMethod(0%);
+          @include transition-method(0.2s);
+        }
+      }
+
+      h3{
+
+        @include grayScaleMethod(0%);
+        @include transition-method(0.2s);
+      }
+      span{
+        @include grayScaleMethod(0%);
+        @include transition-method(0.2s);
+      }
+
+    }
+    .lawyers-box-img{
+      @include grayScaleMethod(0%);
+      @include transition-method(0.2s);
+      @include borderradius(10px);
+      border:1px solid $normalBlueColor;
+      img{
+        @include borderradius(10px);
+        width:100%;
+        @include grayScaleMethod(100%);
+        @include transition-method(0.2s);
+      }
+    }
+
+    h3{
+      margin-top:15px;
+      @include grayScaleMethod(100%);
+      @include transition-method(0.2s);
       font-family: "ArialNovaW07-Bold";
       font-style: normal;
       font-weight: bold;
@@ -1541,6 +1843,8 @@ h3{
       text-transform: uppercase;
     }
     span{
+      @include grayScaleMethod(100%);
+      @include transition-method(0.2s);
       font-family: "ArialNovaW07-Regular";
       font-style: normal;
       font-weight: 300;
@@ -1553,7 +1857,528 @@ h3{
     }
   }
 }
+.select-broadcast{
+  margin-bottom:15px;
+  ul{
+    display: flex;
+    li{
+      margin:10px 0px 10px 10px;
+      background-color:$normalBlueColor;
+      flex: 1 1;
+      height: 40px;
+      width:40px;
+      line-height:40px;
+      text-align: center;
+      border:1px solid $normalBlueColor;
+      @include transition-method(0.5s);
+      &:first-child{
+        margin:10px 10px 10px 0px;
+        flex: 0.5 1;
+        @include borderradiusall(10px,0px,0px,10px);
+      }
+      &:last-child{
+        @include borderradiusall(0px,10px,10px,0px);
+      }
+      &:hover{
+        @include transition-method(0.5s);
+        background-color: transparent;
+        border:1px solid $normalBlueColor;
+      a{
+        color:$normalBlueColor;
+      }
 
+      }
+      a{
+        color:$whitecolor;
+        font-family: "ArialNovaW07-Bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+}
+.broadcast-search{
+  display: flex;
+  margin:10px 0px;
+  .search-btn{
+    height: 40px;
+    width:40px;
+    line-height:40px;
+    text-align: center;
+    border:1px solid $normalBlueColor;
+    @include borderradiusall(10px,0px,0px,10px);
+    background-color: $normalBlueColor;
+    i{
+      color: $whitecolor;
+    }
+  }
+  .search-text{
+    flex: 1 1;
+    input{
+      width:100%;
+      border:1px solid $normalBlueColor;
+      height: 40px;
+      @include borderradiusall(0px,10px,10px,0px);
+      padding:0px 1rem;
+      font-family: "ArialNovaW07-Regular";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 20px;
+      &::placeholder{
+
+        color:$normalBlueColor;
+      }
+    }
+  }
+}
+.broadcast-section{
+  .broadcast-box{
+    text-align: center;
+    padding-bottom:80px;
+    &:hover{
+      .broadcast-img{
+        @include grayScaleMethod(0%);
+        @include transition-method(0.3s);
+      }
+      h3{
+        @include grayScaleMethod(0%);
+        @include transition-method(0.3s);
+      }
+      p{
+        @include grayScaleMethod(0%);
+        @include transition-method(0.3s);
+      }
+    }
+    .broadcast-img{
+      @include grayScaleMethod(100%);
+      @include transition-method(0.3s);
+    }
+    h3{
+      font-family: "ArialNovaW07-Regular";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 27px;
+      text-align: center;
+      color:$normalBlueColor;
+      @include grayScaleMethod(100%);
+      @include transition-method(0.3s);
+    }
+    p{
+      @include grayScaleMethod(100%);
+      @include transition-method(0.3s);
+      font-family: "ArialNovaW07-Light";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center;
+      color:$normalBlueColor;
+    }
+    .broadcast-read-more{
+      text-align: center;
+      a{
+        cursor:pointer;
+        background-color:$normalBlueColor;
+        border:1px solid $normalBlueColor;
+        @include borderradius(10px);
+        height: 54px;
+        display: inline-block;
+        padding: 0px 30%;
+        font-family: "ArialNovaW07-Bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 54px;
+        color:$whitecolor;
+        &:hover{
+          background-color: transparent;
+            color:$normalBlueColor;
+        }
+      }
+    }
+    .broadcast-box-bottom{
+      position: absolute;
+      bottom:0px;
+      span{
+        font-family: "ArialNovaW07-Bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: $normalBlueColor;
+        border:1px solid $normalBlueColor;
+        @include borderradius(10px);
+        height:28px;
+        line-height: 28px;
+        display: inline-block;
+        padding: 0px 0.5rem;
+      }
+      small{
+        display: block;
+        font-family: "ArialNovaW07-Bold";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $normalBlueColor;
+        margin:10px 0px;
+      }
+    }
+  }
+}
+
+.broadcast-detail-section{
+  h1{
+    font-family: "ArialNovaW07-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    color:$blackcolor;
+  }
+  p{
+    font-family: "ArialNovaW07-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color:$aboutWordsColor;
+  }
+}
+.pdf-section{
+  .pdf-btn{
+    min-width:150px;
+    margin:50px 0px;
+    label{
+      cursor:pointer;
+      height:54px;
+      width:50px;
+      float: left;
+      line-height: 54px;
+      text-align:center;
+      background-color: $pdfRedColor;
+      color: $whitecolor;
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      @include borderradiusall(10px,0px,0px,10px);
+    }
+    small{
+      @include borderradiusall(0px,10px,10px,0px);
+      min-width:200px;
+      display: inline-block;
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      height:54px;
+      line-height: 54px;
+      text-align: center;
+      background-color: $normalBlueColor;
+      color: $whitecolor;
+    }
+  }
+}
+.broadcast-detail-section-bottom{
+  .broadcast-box-bottom{
+    span{
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: $normalBlueColor;
+      border:1px solid $normalBlueColor;
+      @include borderradius(10px);
+      height:28px;
+      line-height: 28px;
+      display: inline-block;
+      padding: 0px 0.5rem;
+    }
+    small{
+      display: block;
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      color: $normalBlueColor;
+      margin:10px 0px;
+    }
+
+    display: block;
+
+    .detail-social{
+      .social-box{
+        float: left;
+        margin:10px;
+        label{
+          cursor:pointer;
+          height:54px;
+          width:50px;
+          float: left;
+          line-height: 54px;
+          text-align:center;
+          background-color: $socialBlueColor;
+          color: $whitecolor;
+          font-family: "ArialNovaW07-Bold";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          @include borderradiusall(10px,0px,0px,10px);
+          i{
+            font-size: 34px;
+            line-height: 40px;
+            margin-top: 8px;
+          }
+          img{
+            height: 29px;
+            width: auto;
+          }
+        }
+        a{
+          @include borderradiusall(0px,10px,10px,0px);
+          padding: 0px 1rem;
+          display: inline-block;
+          font-family: "ArialNovaW07-Bold";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          height:54px;
+          line-height: 54px;
+          text-align: center;
+          background-color: $normalBlueColor;
+          color: $whitecolor;
+        }
+      }
+    }
+  }
+}
+.broadcast-detail-sidebar{
+  h1{
+    font-family: "ArialNovaW07-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    color:$blackcolor;
+  }
+  .author-lawyer-box{
+    margin: 15px 0px;
+    width:50%;
+    padding:10px;
+    cursor:pointer;
+    text-align:center;
+    float: left;
+    &:hover{
+      .author-img{
+        img{
+          @include grayScaleMethod(100%);
+        }
+      }
+    }
+    .author-img{
+      border:1px solid $normalBlueColor;
+      img{
+        width:100%;
+        @include grayScaleMethod(0);
+      }
+    }
+    h3{
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      color: $aboutWordsColor;
+    }
+    small{
+      font-family: "ArialNovaW07-Bold";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      color: $aboutWordsColor;
+    }
+  }
+  .sidebar-activity-areas{
+    a{
+      &:first-child{
+        .activity-area-box{
+          border-bottom:1px solid $blackcolor;
+        }
+
+      }
+    }
+    .activity-area-box{
+      margin-bottom:15px;
+      //border-bottom:1px solid $blackcolor;
+
+      /*
+      &:last-child{
+        border-bottom:0px;
+      }*/
+      cursor:pointer;
+      @include grayScaleMethod(100%);
+      @include transition-method(0.3s);
+      .activity-img{
+        img{
+          @include grayScaleMethod(100%);
+          @include transition-method(0.3s);
+        }
+      }
+      &:hover{
+        @include grayScaleMethod(0%);
+        @include transition-method(0.3s);
+        .activity-img{
+          img{
+            @include grayScaleMethod(0%);
+            @include transition-method(0.3s);
+          }
+        }
+      }
+      h3{
+        font-family: "ArialNovaW07-Regular";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: capitalize;
+        color:$normalBlueColor;
+        height: auto;
+      }
+      .activity-area-description{
+        p{
+          font-family: "ArialNovaW07-Light";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 20px;
+          text-align: center;
+          color: $normalBlueColor;
+        }
+      }
+    }
+  }
+}
+.contact-form{
+  h3{
+    text-align: left;
+    text-transform: capitalize;
+    font-family: "ArialNovaW07-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 23px;
+    color:$blackcolor;
+  }
+  input[type=text]{
+    margin:15px 0px;
+    border:0px;
+    width:100%;
+    border-bottom:1px solid $contactFromColor;
+    font-family: "ArialNovaW07-Light";
+    font-style: normal;
+    font-weight: 300;
+    color:$aboutWordsColor;
+    ::placeholder{
+      font-family: "ArialNovaW07-Light";
+      font-style: normal;
+      font-weight: 300;
+      color:$contactFromColor;
+    }
+  }
+  input[type=submit]{
+    margin:15px 0 0 0 ;
+    background-color: $normalBlueColor;
+    color:$whitecolor;
+    border: 1px solid $normalBlueColor;
+    height:54px;
+    line-height: 54px;
+    text-align: center;
+    width:100%;
+    @include borderradius(10px);
+    font-family: "ArialNovaW07-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    @include transition-method(0.3s);
+    &:hover{
+      border: 1px solid $normalBlueColor;
+      background:none;
+      line-height: 54px;
+      color:$normalBlueColor;
+      @include transition-method(0.3s);
+    }
+  }
+  textarea{
+    margin:15px 0 0 0 ;
+    min-height:54px;
+    width:100%;
+    border:0px;
+    border-bottom:1px solid $contactFromColor;
+    color:$contactFromColor;
+    ::placeholder{
+      font-family: "ArialNovaW07-Light";
+      font-style: normal;
+      font-weight: 300;
+      color:$contactFromColor;
+    }
+  }
+  .from-checkbox{
+    input[type=checkbox]{
+      height: 15px;
+      width:15px;
+      background-color: $greycolor;
+      float: left;
+    }
+    label{
+      font-family: "ArialNovaW07-Light";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 9px;
+      line-height: 24px;
+      color:$contactFromColor;
+      height: 15px;
+      float: left;
+    }
+  }
+}
+.contact-information{
+  p{
+    font-family: "ArialNovaW07-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color:$aboutWordsColor;
+  }
+  a{
+    color: $aboutWordsColor;
+    text-decoration:none;
+    font-family: "ArialNovaW07-Light";
+    font-style: normal;
+    display: inline-block;
+    b{
+
+    }
+    :hover{
+      color: $aboutWordsColor;
+    }
+  }
+}
+.contact-map{
+
+}
 
 .grey-bg-color{
   background: $greycolor;
@@ -1569,7 +2394,6 @@ h3{
   {
     background-color: $blackcolor;
     padding: 30px 0px 0px 0px;
-    margin: 0px;
     .container{
       position: relative;
     }
@@ -1637,8 +2461,8 @@ h3{
           {
             list-style: none;
             float: left;
-            height: 30px;
-            line-height: 30px;
+            height: 50px;
+            line-height: 50px;
             padding: 0px 10px;
             width:50%;
             a
@@ -1748,9 +2572,12 @@ h3{
         font-size: 11px;
         line-height: 12px;
         text-align: center;
+        display: block;
+        width:100%;
         margin-top: 15px;
         p
         {
+          display: inline-block;
           color:$footergreycolor;
         }
       }
@@ -1758,639 +2585,9 @@ h3{
   }
 
 
-  //services
-  /*
-  .webiner-section
-  {
-    padding-left: 1vw;
-    .webiner-sec-desc
-    {
-      float: left;
-      width:30%;
-      position: relative;
-
-        h3
-        {
-          font-weight: 700;
-          font-size: 22px;
-          position: relative;
-          margin-bottom: 4vh;
-          .red-line
-          {
-            height: 8vh;
-            width: 0.5vw;
-            background-color: #ED1C24;
-            position: absolute;
-            left: -1vw;
-            top: 0;
-          }
-        }
-      p
-      {
-        font-weight: 500;
-        font-size:16px;
-      }
-    }
-    .webiner-sec-img
-    {
-      float: left;
-      width:70%;
-
-      img
-      {
-        max-width: 100%;
-      }
-    }
-  }
-
-  .webiner-back
-  {
-    position: relative;
-    height: 40vh;
-  }
-  */
-
-
-  .webiner-platform2
-  {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    /*display: flow-root; */
-    display: inline-block;
-    text-align: center;
-    vertical-align: bottom;
-    .webiner-back
-    {
-      position: relative;
-      height: 45vh;
-    }
-    .circleRed2
-    {
-      position: absolute;
-      top: -3vw;
-      right: 7vw;
-      @include circleRed();
-    }
-    .triangleRightRed2
-    {
-      @include triangleRightRed();
-    }
-    .webiner-inside2
-    {
-      position: absolute;
-      bottom:0;
-      display: inline-block;
-      left: 0;
-      right: 0;
-      .webiner-desc2
-      {
-        width:20%;
-        display: inline-grid;
-        text-align: left;
-        margin-bottom: 4vh;
-        h3
-        {
-          font-size: 2vh;
-          font-weight: 600;
-          position: relative;
-          margin-bottom: 2vh;
-          color:$weightBlueColor;
-          .red-line
-          {
-            height: 8vh;
-            width: 0.5vw;
-            background-color: #ED1C24;
-            position: absolute;
-            left: -1vw;
-            top: 0;
-          }
-        }
-        p
-        {
-          font-size: 1.4vh;
-          color:$weightBlueColor;
-          font-weight: 500;
-          margin-bottom: 5px;
-        }
-        a
-        {
-          font-size: 1.6vh;
-          color:$whitecolor;
-          text-decoration:none;
-        }
-      }
-
-      .webiner-img2
-      {
-        display: inline-grid;
-        width: 40%;
-        img
-        {
-
-          height: 45vh;
-          position: absolute;
-          bottom:0;
-        }
-      }
-
-
-    }
-  }
-
-
-  .services-section
-  {
-    background-color:$greylightcolor;
-    background-color: #fafafa;
-    padding: 10vh;
-    float: left;
-    width: 100%;
 
 
 
-    .services
-    {
-      .service-box
-      {
-        width:33.333%;
-        float: left;
-        height: 30vh;
-        border-bottom:1px solid $weightBlueColor;
-        padding: 3vh 1vw 3vh 0;
-        &:nth-child(1),&:nth-child(2),&:nth-child(4),&:nth-child(5)
-        {
-          border-right:1px solid $weightBlueColor;
-        }
-        &:nth-child(4),&:nth-child(5),&:nth-child(6)
-        {
-          border-bottom:0px;
-        }
-        .service-img
-        {
-          float: left;
-          width: 30%;
-          text-align: center;
-          img
-          {
-            margin-top:50px;
-            width:50px;
-          }
-        }
-        .service-desc
-        {
-          float: left;
-          width: 70%;
-          h3
-          {
-            font-weight: 700;
-            font-size: 18px;
-            height: 50px;
-            margin: 0px;
-          }
-          p
-          {
-            color:$servicesgreycolor;
-            font-size: 1.6vh;
-          }
-        }
-      }
-    }
-  }
-  .section-espor
-  {
-    position: relative;
-    img
-    {
-      width:100%;
-    }
-
-    .espor-desc
-    {
-      background : rgba(128, 128, 128, 0.2);
-      opacity : 1;
-      border-radius : 0px 10px 0px 0px;
-      -moz-border-radius : 0px 10px 0px 0px;
-      -webkit-border-radius : 0px 10px 0px 0px;
-      filter: alpha(opacity=24) progid:DXImageTransform.Microsoft.Alpha(opacity=24) ;
-      position: absolute;
-      left: 0;
-      bottom:10px;
-      z-index: 12;
-      width: 45vw;
-      padding: 1rem 4rem;
-      h3
-      {
-        color:$whitecolor;
-        font-size:18px;
-        font-weight: 600;
-        margin:1rem 0;
-      }
-      p
-      {
-        color:$whitecolor;
-        font-size:14px;
-        font-weight: 400;
-        margin:0px;
-      }
-    }
-  }
-  .reklam-section
-  {
-    background:url("../img/reklam-back.jpg") ;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
-    &.backnone
-    {
-      background: none !important;
-
-    }
-    .work-love
-    {
-      background:none !important;
-      .love-work
-      {
-        text-align: center;
-        color:$weightBlueColor;
-        h3
-        {
-          text-transform: capitalize;
-          font-size:36px;
-          font-weight: 600;
-          font-family: 'Raleway', sans-serif;
-        }
-        p
-        {
-          font-size:18px;
-          font-weight: 400;
-          font-family: 'Raleway', sans-serif;
-          width:60%;
-          display: inline-block;
-        }
-      }
-    }
-    .services-section
-    {
-      background: none !important;
-      &.reklam
-      {
-        .services
-        {
-          .service-box
-          {
-            width:33.333%;
-            float: left;
-            height: 30vh;
-            border-bottom:0px solid $weightBlueColor;
-            padding: 3vh 1vw 3vh 0;
-            &:nth-child(1),&:nth-child(2),&:nth-child(4),&:nth-child(5)
-            {
-              border-right:1px solid $weightBlueColor;
-            }
-            &:nth-child(4),&:nth-child(5),&:nth-child(6)
-            {
-              border-bottom:0px;
-            }
-            .service-img
-            {
-              float: left;
-              width: 30%;
-              text-align: center;
-              img
-              {
-                margin-top:50px;
-                width:50px;
-              }
-            }
-            .service-desc
-            {
-              float: left;
-              width: 70%;
-              h3
-              {
-                font-weight: 700;
-                font-size: 18px;
-                height: 50px;
-                margin: 0px;
-              }
-              p
-              {
-                color:$servicesgreycolor;
-                font-size: 1.6vh;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .equipment-section
-  {
-    position: relative;
-    .equipment-img
-    {
-      width:100%;
-    }
-    .equipment-left
-    {
-      width:40vw;
-      left: 0;
-      height: 100%;
-      position: absolute;
-      background-color: $whitecolorpacity03;
-      padding: 20vh 7vw;
-      &.equipment-right
-      {
-        right:0;
-        left: auto;
-      }
-      .equipment-left-desc
-      {
-        color:$blacklightcolor;
-        h3
-        {
-          font-size: 24px;
-          font-weight: 600;
-        }
-        h4
-        {
-          font-size: 20px;
-          font-weight: 500;
-        }
-        p
-        {
-          font-size: 14px;
-          font-weight: 400;
-        }
-      }
-    }
-  }
-
-  .contact-btn-section
-  {
-    text-align: center;
-    margin:3rem 0;
-    a
-    {
-      height: 45px;
-      line-height: 45px;
-      padding: 0px 3rem;
-      @include borderradius(24px);
-      color:$weightBlueColor;
-      border:1px solid $weightBlueColor;
-      font-size: 22px;
-      font-weight: 600;
-      display: inline-block;
-      text-decoration: none;
-      transition: all .5s ease-in;
-      -moz-transition: all .5s ease-in;
-      -webkit-transition: all .5s ease-in;
-      -ms-transition: all .5s ease-in;
-      &:hover
-      {
-        background-color: $weightBlueColor;
-        color:$whitecolor;
-        transition: all .5s ease-in;
-        -moz-transition: all .5s ease-in;
-        -webkit-transition: all .5s ease-in;
-        -ms-transition: all .5s ease-in;
-      }
-    }
-  }
-
-
-  .moon-section{
-    background: url("../img/universe_blue.jpg");
-    //background:$weightBlueColor;
-    height: 100vh;
-    /* display: -webkit-box; */
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    .moon-out {
-      height: 600px;
-      width: 600px;
-      position: absolute;
-      z-index: 12;
-      background-position: center;
-      background-image: url("../img/sun.png");
-      background-repeat: no-repeat;
-      background-size: 104%;
-      background-position: center;
-      @include rotateMoon(120s);
-
-
-    }
-    .moon{
-      height: 600px;
-      width: 600px;
-      border-radius: 100%;
-      margin: auto auto;
-      border: 40px;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      z-index: 999999;
-
-      .moon-inside{
-        position: relative;
-        z-index: 42;
-        @include moonBack();
-        /*background: $blackcolor; */
-        height: 500px;
-        width: 500px;
-        border-radius: 100%;
-        margin: 0px;
-        border: 20px solid transparent;
-        text-align: center;
-        .contact-info{
-          @include vertical-align();
-          .homepage-title{
-            margin:0px;
-            h3{
-              @include moonFontColor();
-              &:after{
-                ackground: none;
-                content: attr(data-heading);
-                left: 0;
-                top: 0;
-                z-index: -1;
-                position: absolute;
-                text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
-              }
-            }
-            span{
-              &:before{
-                background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #f79a07 78%);
-              }
-              &:after{
-                background-color: #f79a07;
-              }
-            }
-          }
-          ul{
-            li{
-              margin:5px 0px;
-              span{
-                i{
-                  font-size:20px;
-                  margin-right: 5px;
-                @include moonFontColor();
-                  &:after{
-                    ackground: none;
-                    content: attr(data-heading);
-                    left: 0;
-                    top: 0;
-                    z-index: -1;
-                    position: absolute;
-                    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
-                  }
-                }
-
-              }
-              a{
-                font-size:20px;
-                color:$whitecolor;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-
-
-
-.fly-rules{
-    .fly-rules-img{
-      @include borderradius(5px);
-      @include textShadow();
-      overflow: hidden;
-      img{
-          width: 100%;
-      }
-    }
-  .fly-rules-item{
-      .accordion{
-        @include textShadow();
-        .card{
-          .card-header{
-            background:$weightBlueColor;
-            h2{
-              button{
-                color: $whitecolor;
-                text-decoration: none;
-                font-weight: 600;
-                &.collapsed{
-                  i{
-                    &.fa-star{
-                      display:  inline-block ;
-                    }
-                    &.fa-sun-o{
-                      display:none;
-                    }
-                  }
-                }
-                i{
-                  color: $whitecolor;
-                  margin:0px 5px;
-                  &.fa-star{
-                    display: none;
-                  }
-                  &.fa-sun-o{
-                    @include rotateMoon(10s);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-  }
-}
-
-
-  //Contact start
-
-  .contact-us{
-    margin:40px 0px;
-    .contact-form{
-
-      .input-group{
-        @include textShadow();
-        display: flex;
-        .input-group-prepend{
-
-          @include borderradius(0px);
-          .input-group-text{
-            width:50px;
-            background: none;
-            border: 1px solid $lightGreyColor;
-            border-right: 0px;
-            @include borderradius(0px);
-            i{
-              color:$weightBlueColor;
-            }
-          }
-        }
-        .form-control-lg{
-          flex: 1;
-          border: 1px solid $lightGreyColor;
-          border-left: 0px;
-          @include borderradius(0px);
-        }
-        textarea{
-          flex: 1;
-          border: 1px solid $lightGreyColor;
-          border-left:0px;
-        }
-      }
-      .contact-btn{
-        background-color: $weightBlueColor;
-        color:$whitecolor;
-        padding: 0px 2rem;
-        display: inline-block;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        border:0px;
-        @include transition-method(0.2s);
-        &:hover{
-          @include borderradius(20px);
-          @include transition-method(0.2s);
-          @include textShadow();
-        }
-      }
-    }
-  }
 
 .map{
   height: 450px;
@@ -2398,7 +2595,7 @@ h3{
 
   #myBtn{
     display: none;
-    top: -75px;
+    //top: -75px;
     right: 20px;
     height: 40px;
     width: 40px;
@@ -2449,5 +2646,71 @@ h3{
   }
 
 
+/* The checkbox-container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: $menuHoverBlue;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 

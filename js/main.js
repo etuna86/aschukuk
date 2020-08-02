@@ -5,6 +5,11 @@ $('.mobil-menu-btn').click(function () {
     $('.mobile-menu').toggleClass('open');
 })
 
+$('.mobile-submenu-btn').click(function () {
+    $(this).toggleClass('opened-btn');
+    $('.mobile-submenu').toggleClass('open-submenu');
+})
+
 $('.list').click(function () {
     $('.mobile-menu').removeClass('open');
     $('.mobil-menu-btn').removeClass('opened');
@@ -122,7 +127,7 @@ $('#activity-areas').owlCarousel({
     navText:['<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>','<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>'],
     responsive:{
         0:{
-            items:3
+            items:1
         },
         600:{
             items:3
@@ -169,7 +174,7 @@ $('#lawyers-on-subject').owlCarousel({
     navText:['<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>','<div class="slider-arrow-box"><img src="img/arrow-blue.svg" /></div>'],
     responsive:{
         0:{
-            items:5
+            items:1
         },
         600:{
             items:5
