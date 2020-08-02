@@ -2351,6 +2351,9 @@ h3{
       height: 15px;
       float: left;
     }
+    .checkmark{
+      background: $greycolor;
+    }
   }
 }
 .contact-information{
@@ -2377,7 +2380,9 @@ h3{
   }
 }
 .contact-map{
-
+  iframe{
+    display: block;
+  }
 }
 
 .grey-bg-color{
@@ -2676,7 +2681,7 @@ h3{
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: $whitecolor;
 }
 
 /* On mouse-over, add a grey background color */
