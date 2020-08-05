@@ -693,12 +693,21 @@ li div ul li a {
 
     }
   }
-
+.owl-theme{
+  .owl-nav{
+    margin-top: 0px;
+  }
+}
   .banner-section
   {
     position: relative;
     .main-slider
     {
+      .owl-theme{
+        .owl-nav{
+          margin-top: 0px;
+        }
+      }
       .main-slider-item
       {
         h3

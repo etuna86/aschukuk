@@ -1,5 +1,13 @@
 @import 'style-variables';
 
+
+@media screen and (max-width: 1280px) {
+  header .main-menu ul li:hover div ul li a{
+    padding: 10px;
+  }
+}
+
+
 @media   (max-width:768px) {
 
   .main-menu{
@@ -33,6 +41,11 @@
     display: block;
     padding: 0px 15px;
     margin: 10px 0px;
+    position: absolute;
+    height: 60px;
+    width: 55px;
+    top: -60px;
+    right: 0;
     i{
       //color:$weightBlueColor;
       color: $whitecolor;
@@ -197,10 +210,10 @@
   height:300px;
   overflow: visible;
   .btn-stop{
-    margin-top: -95px;
+    margin-top: -80px;
   }
   .btn-play{
-    margin-top: -95px;
+    margin-top: -80px;
   }
   .triangle-section-upper{
     display: none;
@@ -210,7 +223,11 @@
   }
     .main-slider {
       height: 300px;
-
+      .owl-theme {
+        .owl-dots{
+          margin-top: -30px;
+        }
+      }
       .main-slider-item {
         img {
           object-fit: cover;
@@ -224,7 +241,10 @@
           top: 0;
           text-align: center;
           h3{
-            fonts-size:16px;
+            font-size:16px;
+            b{
+              font-size:16px;
+            }
           }
           .slider-btn{
             height: 35px;
@@ -238,7 +258,7 @@
         display: none;
     button{
     }
-  }  
+  }
   }
 
   .activity-areas {
@@ -413,7 +433,7 @@
         border:0px !important;
         ul {
           li{
-            width: 100%;
+            //width: 100%;
             text-align: left;
           }
         }
@@ -422,5 +442,14 @@
         margin:20px 0 10px 0;
       }
     }
+  }
+}
+
+
+
+
+@media   (max-width:350px) {
+  footer .footer-inside .footer-menu ul li a{
+    font-size: 15px;
   }
 }

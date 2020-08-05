@@ -103,7 +103,7 @@ $('#main-slider').owlCarousel({
 })
 
 
-
+/*
 $('.play').on('click',function(){
     $('#main-slider').trigger('play.owl.autoplay',[1000])
     $(this).addClass('close');
@@ -114,7 +114,7 @@ $('.stop').on('click',function(){
     $(this).addClass('close');
     $('.play').removeClass('close');
 })
-
+*/
 $('#activity-areas').owlCarousel({
     items:3,
     loop:true,
@@ -190,7 +190,7 @@ $(".list").on('click', function(event) {
     event.preventDefault();
     var hash = this.hash ;
     $('html, body').animate({
-        scrollTop:$(hash).offset().top - 60
+        scrollTop:$(hash).offset().top
     },1000 );
 });
 

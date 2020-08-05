@@ -595,8 +595,13 @@ header {
                   z-index: 12;
                   position: relative; }
 
+.owl-theme .owl-nav {
+  margin-top: 0px; }
+
 .banner-section {
   position: relative; }
+  .banner-section .main-slider .owl-theme .owl-nav {
+    margin-top: 0px; }
   .banner-section .main-slider .main-slider-item h3 {
     font-family: 'ArialNovaW07-Bold';
     color: #fff;
