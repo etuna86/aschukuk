@@ -1543,6 +1543,7 @@ header {
     line-height: 20px;
     color: #575757; }
   .activity-areas .activity-area-box {
+    position: relative;
     cursor: pointer;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);

@@ -1,4 +1,29 @@
-
+/*window.onload = function() {
+    var elements = document.getElementsByTagName('sd');
+    for (var i in elements) {
+        if (!elements.hasOwnProperty(i)) continue;
+        elements[i].addEventListener( 'mouseover', function() {
+            this.className += 'a';
+        }
+        elements[i].addEventListener( 'mouseout', function() {
+            this.className = this.className.replace( /(?:^|\s)a(?!\S)/g , '' );
+        }
+    }
+} */
+$(document).ready(function() {
+$(".grayscale").hover(
+    function () {
+        $(this).addClass("grayscale-off");
+    }, function () {
+        $(this).removeClass("grayscale-off");
+    }
+);
+/*
+$(".grayscale").on("mouseover", function () {
+    alert("hover");
+    $(this).addClass('grayscale-off');
+});*/
+});
 
 $('.mobil-menu-btn').click(function () {
     $(this).toggleClass('opened');
@@ -215,3 +240,34 @@ $('.owl-prev').click(function () {
     SliderRocketFire[0].style.display = "inline-block";
     setTimeout(function(){  SliderRocketFire[0].style.display = "none"; }, 200);
 })
+
+
+//greyscalemethod
+/**/
+/*
+$('.img-border-radius').click(function (){
+    alert("hover");
+    $(this).addClass('grayscale-off');
+});
+
+$(document).ready(function () {
+    $('.img-border-radius').click(function (){
+        alert("hover");
+        $(this).addClass('grayscale-off');
+    });
+    $('.grayscale').onmouseover(function () {
+        alert("hover");
+        $(this).addClass('grayscale-off');
+    });
+
+
+    $(".grayscale").hover(
+        function () {
+            alert("hover");
+            $(this).addClass("grayscale-off");
+        }, function () {
+            $(this).removeClass("grayscale-off");
+        }
+    );
+}
+*/
